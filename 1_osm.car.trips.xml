@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-08-13 09:18:14.799011 by randomTrips.py v1_19_0+0000-baa66a0f364
+<configuration>
+    <net-file value="osm.net.xml.gz"/>
+    <output-trip-file value="osm.passenger.trips.xml"/>
+    <route-file value="osm.passenger.rou.xml"/>
+    <prefix value="veh"/>
+    <trip-attributes value="departLane=&quot;best&quot;"/>
+    <fringe-start-attributes value="departSpeed=&quot;max&quot;"/>
+    <vehicle-class value="passenger"/>
+    <lanes value="True"/>
+    <fringe-factor value="5"/>
+    <allow-fringe.min-length value="1000.0"/>
+    <via-edge-types value="highway.motorway,highway.motorway_link,highway.trunk_link,highway.primary_link,highway.secondary_link,highway.tertiary_link"/>
+    <min-distance value="300.0"/>
+    <min-distance.fringe value="10.0"/>
+    <remove-loops value="True"/>
+    <validate value="True"/>
+    <insertion-density value="12.0"/>
+</configuration>
+-->
+
+<!-- generated on 2024-08-13 09:18:14 by Eclipse SUMO duarouter Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="osm.net.xml.gz"/>
+        <route-files value="osm.passenger.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.passenger.trips.xml.tmp"/>
+        <alternatives-output value="NUL"/>
+        <write-trips value="true"/>
+    </output>
+
+    <processing>
+        <remove-loops value="true"/>
+    </processing>
+
+    <time>
+        <begin value="0.0"/>
+        <end value="3600.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="veh_car" vClass="passenger"/>
+    <vType id="veh_CV" vClass="passenger" color="red"/>
+	<vTypeDistribution id="mixedtype" vTypes="veh_car veh_CV" probabilities=" 0 1 "/>
+    
+    <flow id="ZZ_e_WL_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="-814779818" to="770473078"/>
+    <flow id="ZZ_e_WL_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="-814779818" to="7046561#2"/>
+    <flow id="ZZ_e_IM_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="-814779818" to="-7045691"/>
+    <flow id="ZZ_e_IM_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="-814779818" to="-7045925#2"/>
+    <flow id="ZZ_e_ZZ_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="-814779818" to="E0"/>
+    <flow id="ZZ_e_ZZ_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="-814779818" to="146254402"/>
+
+    <flow id="ZZ_n_WL_w" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045306" to="7046455.81"/>
+    <flow id="ZZ_n_WL_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045306" to="770473078"/>
+    <flow id="ZZ_n_WL_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045306" to="7046561#2"/>
+    <flow id="ZZ_n_IM_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045306" to="-7045691"/>
+    <flow id="ZZ_n_IM_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045306" to="-7045925#2"/>
+    <flow id="ZZ_n_ZZ_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045306" to="E0"/>
+    <flow id="ZZ_n_ZZ_e" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045306" to="814779818"/>
+
+    <flow id="ZZ_s_WL_w" type="mixedtype" begin="0" end="10800" probability="0.002" from="-E0" to="7046455.81"/>
+    <flow id="ZZ_s_WL_s" type="mixedtype" begin="0" end="10800" probability="0.002" from="-E0" to="770473078"/>
+    <flow id="ZZ_s_WL_n" type="mixedtype" begin="0" end="10800" probability="0.002" from="-E0" to="7046561#2"/>
+    <flow id="ZZ_s_IM_s" type="mixedtype" begin="0" end="10800" probability="0.002" from="-E0" to="-7045691"/>
+    <flow id="ZZ_s_IM_n" type="mixedtype" begin="0" end="10800" probability="0.002" from="-E0" to="-7045925#2"/>
+    <flow id="ZZ_s_ZZ_n" type="mixedtype" begin="0" end="10800" probability="0.002" from="-E0" to="146254402"/>
+    <flow id="ZZ_s_ZZ_e" type="mixedtype" begin="0" end="10800" probability="0.002" from="-E0" to="814779818"/>
+
+    <flow id="IM_n_WL_w" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045925#0" to="7046455.81"/>
+    <flow id="IM_n_WL_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045925#0" to="770473078"/>
+    <flow id="IM_n_WL_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045925#0" to="7046561#2"/>
+    <flow id="IM_n_IM_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045925#0" to="-7045691"/>
+    <flow id="IM_n_ZZ_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045925#0" to="E0"/>
+    <flow id="IM_n_ZZ_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045925#0" to="146254402"/>
+    <flow id="IM_n_ZZ_e" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045925#0" to="814779818"/>
+
+    <flow id="IM_s_WL_w" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045691" to="7046455.81"/>
+    <flow id="IM_s_WL_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045691" to="770473078"/>
+    <flow id="IM_s_WL_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045691" to="7046561#2"/>
+    <flow id="IM_s_IM_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045691" to="-7045925#2"/>
+    <flow id="IM_s_ZZ_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045691" to="E0"/>
+    <flow id="IM_s_ZZ_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045691" to="146254402"/>
+    <flow id="IM_s_ZZ_e" type="mixedtype" begin="0" end="10800" probability="0.008" from="7045691" to="814779818"/>
+
+    <flow id="WL_w_WL_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="770446896#0" to="770473078"/>
+    <flow id="WL_w_WL_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="770446896#0" to="7046561#2"/>
+    <flow id="WL_w_IM_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="770446896#0" to="-7045691"/>
+    <flow id="WL_w_IM_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="770446896#0" to="-7045925#2"/>
+    <flow id="WL_w_ZZ_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="770446896#0" to="E0"/>
+    <flow id="WL_w_ZZ_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="770446896#0" to="146254402"/>
+
+    <flow id="WL_n_WL_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046563#0" to="770473078"/>
+    <flow id="WL_n_WL_w" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046563#0" to="7046455.81"/>
+    <flow id="WL_n_IM_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046563#0" to="-7045691"/>
+    <flow id="WL_n_IM_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046563#0" to="-7045925#2"/>
+    <flow id="WL_n_ZZ_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046563#0" to="E0"/>
+    <flow id="WL_n_ZZ_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046563#0" to="146254402"/>
+    <flow id="WL_n_ZZ_e" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046563#0" to="814779818"/>
+
+    <flow id="WL_s_WL_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046570" to="7046561#2"/>
+    <flow id="WL_s_WL_w" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046570" to="7046455.81"/>
+    <flow id="WL_s_IM_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046570" to="-7045691"/>
+    <flow id="WL_s_IM_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046570" to="-7045925#2"/>
+    <flow id="WL_s_ZZ_s" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046570" to="E0"/>
+    <flow id="WL_s_ZZ_n" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046570" to="146254402"/>
+    <flow id="WL_s_ZZ_e" type="mixedtype" begin="0" end="10800" probability="0.008" from="7046570" to="814779818"/>
+
+
+    <flow id="ZZ_e_WL_w" type="mixedtype" begin="0" end="1800" probability="0.02" from="-814779818" to="7046455.81"/>
+    <flow id="WL_w_ZZ_e" type="mixedtype" begin="0" end="1800" probability="0.02" from="770446896#0" to="814779818"/>
+    <flow id="ZZ_e_WL_w1" type="mixedtype" begin="1800" end="3600" probability="0.03" from="-814779818" to="7046455.81"/>
+    <flow id="WL_w_ZZ_e1" type="mixedtype" begin="1800" end="3600" probability="0.03" from="770446896#0" to="814779818"/>
+    <flow id="WL_w_ZZ_e2" type="mixedtype" begin="3600" end="5400" probability="0.05" from="770446896#0" to="814779818"/>
+    <flow id="ZZ_e_WL_w2" type="mixedtype" begin="3600" end="5400" probability="0.05" from="-814779818" to="7046455.81"/>
+    <flow id="WL_w_ZZ_e3" type="mixedtype" begin="5400" end="7200" probability="0.07" from="770446896#0" to="814779818"/>
+    <flow id="ZZ_e_WL_w3" type="mixedtype" begin="5400" end="7200" probability="0.07" from="-814779818" to="7046455.81"/>
+    <flow id="WL_w_ZZ_e4" type="mixedtype" begin="7200" end="9000" probability="0.03" from="770446896#0" to="814779818"/>
+    <flow id="ZZ_e_WL_w4" type="mixedtype" begin="7200" end="9000" probability="0.03" from="-814779818" to="7046455.81"/>
+    <flow id="WL_w_ZZ_e5" type="mixedtype" begin="9000" end="10800" probability="0.01" from="770446896#0" to="814779818"/>
+    <flow id="ZZ_e_WL_w5" type="mixedtype" begin="9000" end="10800" probability="0.01" from="-814779818" to="7046455.81"/>
+
+</routes>

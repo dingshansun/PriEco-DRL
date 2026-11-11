@@ -1,0 +1,13 @@
+ZZ GGGGrrrrrrrrrrrr M 1 0 0 0 0
+ZZ rrrrrrrrGGGrrrrr M 1 0 0 0 0
+ZZ rrrrGrrrrrrGgrrr M 1 0 0 0 0
+ZZ rrrrrGGGrrrrrrrr M 1 0 0 0 0
+ZZ rrrrrrrrrrrrrGGG M 1 0 0 0 0
+IM gggGGGrrrrrrrrrrrrrrrr M 1 0 0 0 0
+IM rrrrrrGGGGGrrrrrrrrrrr M 1 0 0 0 0
+IM rrrrrrrrrrrgggGGGrrrrr M 1 0 0 0 0
+IM rrrrrrrrrrrrrrrrrGGGGG M 1 0 0 0 0
+WL gggGGGrrrrrrrrrrrrrrrrrr M 1 0 0 0 0
+WL rrrrrrgggGGGrrrrrrrrrrrr M 1 0 0 0 0
+WL rrrrrrrrrrrrgggGGGrrrrrr M 1 0 0 0 0
+WL rrrrrrrrrrrrrrrrrrgggGGG M 1 0 0 0 0

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-11-04 14:03:34 by Eclipse SUMO netedit Version 1.19.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- StoppingPlaces -->
+    <busStop id="-4622218685" name="Amsterdam, Javaplein" lane="-7045925#2_0" startPos="26.73" endPos="41.73" friendlyPos="true" lines="22_2 65_1"/>
+    <busStop id="11405370176" name="Amsterdam, Molukkenstraat" lane="7045689_0" startPos="37.95" endPos="62.95" friendlyPos="true" lines="3_1 14_1 22_1 37_1 40_1"/>
+    <busStop id="1614149711" name="Amsterdam, Zeeburgerdijk" lane="-7045925#2_0" startPos="166.16" endPos="181.16" friendlyPos="true" lines="22_2 65_1"/>
+    <busStop id="2013949519" name="Muiderpoortstation" lane="324264745_0" startPos="42.01" endPos="67.01" friendlyPos="true" lines="3_2 1_2"/>
+    <busStop id="237962650" name="Dapperstraat" lane="770438581_0" startPos="207.74" endPos="232.74" friendlyPos="true" lines="3_1 1_1 14_1 37_1"/>
+    <busStop id="2674521954" name="Eerste Van Swindenstraat" lane="770460804_0" startPos="117.82" endPos="142.82" friendlyPos="true" lines="19_2"/>
+    <busStop id="2674521961" name="Eerste Van Swindenstraat" lane="770460803#0_0" startPos="154.28" endPos="179.28" friendlyPos="true" lines="19_1 14_1"/>
+    <busStop id="2674521970" name="Wijttenbachstraat" lane="770460804_0" startPos="313.79" endPos="338.79" friendlyPos="true" lines="19_2"/>
+    <busStop id="2674521976" name="Oostpoort" lane="770473078_0" startPos="272.19" endPos="297.19" friendlyPos="true" lines="19_2"/>
+    <busStop id="286316889" name="Flevopark" lane="325023871#1_0" startPos="222.47" endPos="247.47" friendlyPos="true" lines="3_2"/>
+    <busStop id="2987217066" name="Javaplein" lane="323515435.382_0" startPos="838.93" endPos="863.93" friendlyPos="true" lines="14_1"/>
+    <busStop id="3011895790" name="Amsterdam, Javaplein" lane="7045925#0_0" startPos="228.41" endPos="243.41" friendlyPos="true" lines="22_1 65_2"/>
+    <busStop id="3299908038" name="Muiderpoortstation" lane="770429443_0" startPos="24.92" endPos="49.92" friendlyPos="true" lines="1_1"/>
+    <busStop id="3299908040" name="Dapperstraat" lane="759987750#0_0" startPos="287.01" endPos="312.01" friendlyPos="true" lines="3_2 1_2 37_2"/>
+    <busStop id="3299908041" name="Linnaeusstraat" lane="770446896#1_0" startPos="10.58" endPos="35.58" friendlyPos="true" lines="3_2 1_2 37_2"/>
+    <busStop id="3303180661" name="Flevopark" lane="458116534_0" startPos="41.94" endPos="66.94" friendlyPos="true" lines="3_1"/>
+    <busStop id="3303180663" name="Insulindeweg" lane="770424007_0" startPos="702.06" endPos="727.06" friendlyPos="true" lines="3_2 37_2"/>
+    <busStop id="3303180666" name="Soembawastraat" lane="770424007_0" startPos="219.86" endPos="244.86" friendlyPos="true" lines="3_2 37_2"/>
+    <busStop id="3307084741" name="Zeeburgerdijk" lane="323515435.382_0" startPos="386.44" endPos="411.44" friendlyPos="true" lines="14_1"/>
+    <busStop id="427562504" name="Muiderpoortstation" lane="458871590_0" startPos="65.67" endPos="90.67" friendlyPos="true" lines="3_1 14_1"/>
+    <busStop id="434507137" name="Oostpoort" lane="770468921#0_0" startPos="180.85" endPos="205.85" friendlyPos="true" lines="19_1"/>
+    <busStop id="434507138" name="Linnaeusstraat" lane="770438581_0" startPos="408.94" endPos="433.94" friendlyPos="true" lines="3_1 1_1 14_1 37_1"/>
+    <busStop id="434507140" name="Wijttenbachstraat" lane="770468921#0_0" startPos="472.56" endPos="497.56" friendlyPos="true" lines="19_1"/>
+    <busStop id="434524953" name="Insulindeweg" lane="122385065#1_0" startPos="58.86" endPos="83.86" friendlyPos="true" lines="3_1 37_1"/>
+    <busStop id="434524954" name="Soembawastraat" lane="122385065#1_0" startPos="481.85" endPos="506.85" friendlyPos="true" lines="3_1 37_1"/>
+    <busStop id="4621136511" name="Amsterdam, Valentijnkade" lane="-7045691_0" startPos="251.10" endPos="266.10" friendlyPos="true" lines="40_2 65_2"/>
+    <busStop id="4621136512" name="Amsterdam, Valentijnkade" lane="7045691_0" startPos="28.57" endPos="43.57" friendlyPos="true" lines="65_1 40_1"/>
+    <busStop id="4622218686" name="Amsterdam, Zeeburgerdijk" lane="7045925#0_0" startPos="70.88" endPos="85.88" friendlyPos="true" lines="65_2 22_1"/>
+    <busStop id="7191688890" name="Amsterdam, Muiderpoortstation" lane="195649386#1_0" startPos="67.59" endPos="82.59" friendlyPos="true" lines="22_2 37_2 40_2"/>
+    <busStop id="7191688891" name="Amsterdam, Muiderpoortstation" lane="614449799#2.379_0" startPos="70.12" endPos="85.12" friendlyPos="true" lines="22_1 37_1 40_1"/>
+    <busStop id="bs_0" name="Amsterdam, Molukkenstraat" lane="7045675#1_0" startPos="299.29" endPos="324.29" lines="3_2 22_2 37_2 40_2"/>
+</additional>

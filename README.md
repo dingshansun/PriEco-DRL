@@ -1,6 +1,6 @@
 # PriEco-DRL
 
-Minimal source-code implementation of **PriEco-DRL: Coordinated Electric-Bus Eco-Driving under Transit-Priority Adaptive Signal Control via Deep Reinforcement Learning**.
+Minimal implementation and SUMO scenario for **PriEco-DRL: Coordinated Electric-Bus Eco-Driving under Transit-Priority Adaptive Signal Control via Deep Reinforcement Learning**.
 
 PriEco-DRL combines pressure-aware electric-bus acceleration control, stop-approach guidance, and transit-priority max-pressure signals. This release contains five Python source files from the maintained `Four_line` implementation, including stop/intersection overlap guidance and a continuous green-window slack reward.
 
@@ -14,7 +14,7 @@ PriEco-DRL combines pressure-aware electric-bus acceleration control, stop-appro
 | `train_rl_par.py` | Parallel-environment SAC training entry point. |
 | `eval.py` | Shared-policy bus evaluation and metric export. |
 
-The energy model is implemented inside `sutraffic_env.py`; no separate energy postprocessing script is needed by these modules. Only the source implementation is distributed here. Corridor input files, pretrained models, normalization statistics, and experimental outputs are outside this release.
+The energy model is implemented inside `sutraffic_env.py`; no separate energy postprocessing script is needed by these modules. Version 1.0.1 also includes the 13 corridor input files listed below. Pretrained models, normalization statistics, and experimental outputs are outside this release.
 
 ## Software setup
 
@@ -34,13 +34,13 @@ python -B -c "import sutraffic_env, extract_CV_information, pressure_controller;
 
 ## Inputs for training and evaluation
 
-The entry points expect a compatible SUMO scenario in the working directory:
+The following SUMO scenario and metadata files are included in the repository root:
 
-- `1_osm.sumocfg` and the network, routes, stop definitions, and other files referenced by that configuration;
+- `1_osm.sumocfg`, `1_1_osm.net.xml`, `1_osm.bus.trips.xml`, `1_osm.car.trips.xml`, `1_osm_stops.add.xml`, and `osm.view.xml`;
 - `For_correcting_LTT.txt`, `Bus_stop_position.txt`, `Edge_length_speed.txt`;
 - `In_out_pairs.txt`, `Signal_phase.txt`, `Sourced_link.txt`, and `Corridor_edge.txt`.
 
-The pressure controller uses the corridor junction identifiers `TL_ZZ`, `TL_IM`, and `TL_WL`, with 16, 22, and 24 movement slots. A different network requires corresponding movement mappings and signal-controller configuration. The entry points read scenario metadata at import time and are intended to run after these external inputs are supplied.
+Run the entry points from the repository root so that their relative input paths resolve. The pressure controller uses the corridor junction identifiers `TL_ZZ`, `TL_IM`, and `TL_WL`, with 16, 22, and 24 movement slots. A different network requires corresponding movement mappings and signal-controller configuration. The entry points read the supplied scenario metadata at import time.
 
 Training:
 
@@ -71,14 +71,14 @@ The internal stage labels retain the source implementation's numbering:
 
 These labels identify reward branches. During intersection-led overlap, stop-approach guidance is added to the intersection guidance. Acceleration execution and safety-relevant reward terms are defined in the environment source.
 
-This is a snapshot of the maintained implementation, rather than an archive of every historical training revision. Evaluation of a previously trained policy requires its matching observation definition, scenario settings, and normalization state. Published table and figure data are not bundled with this code-only release.
+This is a snapshot of the maintained implementation, rather than an archive of every historical training revision. Evaluation of a previously trained policy requires its matching observation definition, scenario settings, and normalization state. Published table and figure data are not bundled with this implementation-and-scenario release.
 
 ## Release preparation
 
 The three core modules and the training entry point retain their source contents. The evaluation copy uses a configurable model directory, timestamped output directories, and opt-in debug printing. These changes concern file handling and diagnostics; the policy and reward calculations are retained.
 
-Preparation checks cover Python syntax, the local dependency closure, core-module imports, and lightweight reward/overlap unit tests. No training or traffic simulation is launched as part of these checks.
+Preparation checks cover Python syntax, the local dependency closure, core-module imports, and lightweight reward/overlap unit tests. The added scenario is checked for complete local file references and XML equivalence to the source inputs; only local filesystem paths in the network's generator comment are sanitized. No training or traffic simulation is launched as part of these checks.
 
 ## License
 
-The distributed source code is provided under the MIT License; see `LICENSE`. External simulators, scenario inputs, pretrained models, and third-party components retain their own terms.
+The Python source code and original documentation are provided under the MIT License; see `LICENSE`. The scenario bundle incorporates OpenStreetMap-derived data and retains the Open Database License (ODbL) 1.0; see `NOTICE.md`. External simulators and other third-party components retain their own terms.

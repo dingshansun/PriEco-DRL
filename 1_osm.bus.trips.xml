@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-08-13 09:18:14.391462 by randomTrips.py v1_19_0+0000-baa66a0f364
+<configuration>
+    <net-file value="osm.net.xml.gz"/>
+    <output-trip-file value="osm.bus.trips.xml"/>
+    <route-file value="osm.bus.rou.xml"/>
+    <prefix value="bus"/>
+    <trip-attributes value="departLane=&quot;best&quot;"/>
+    <fringe-start-attributes value="departSpeed=&quot;max&quot;"/>
+    <vehicle-class value="bus"/>
+    <fringe-factor value="5"/>
+    <vclass value="bus"/>
+    <via-edge-types value="highway.motorway,highway.motorway_link,highway.trunk_link,highway.primary_link,highway.secondary_link,highway.tertiary_link"/>
+    <min-distance value="600.0"/>
+    <min-distance.fringe value="10.0"/>
+    <remove-loops value="True"/>
+    <validate value="True"/>
+    <insertion-density value="4.0"/>
+</configuration>
+-->
+
+<!-- generated on 2024-08-13 09:18:14 by Eclipse SUMO duarouter Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="osm.net.xml.gz"/>
+        <route-files value="osm.bus.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.bus.trips.xml.tmp"/>
+        <alternatives-output value="NUL"/>
+        <write-trips value="true"/>
+    </output>
+
+    <processing>
+        <remove-loops value="true"/>
+    </processing>
+
+    <time>
+        <begin value="0.0"/>
+        <end value="3600.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="bus_bus" vClass="bus" color="green" carFollowModel="IDM" tau="1.5" accel="2.6" decel="2.6">
+        <param key="has.fcd.device" value="true"/>
+    </vType>
+    <route id="bus_37Ams_Route" edges="-814779818 7045269 770434440 325023862#0 122385065#1 7045689 614449799#2.379 770438581 7046455 7046455.81">
+        <stop busStop="434524953" duration="15"/>
+        <stop busStop="434524954" duration="15"/>
+        <stop busStop="11405370176" duration="15"/>
+        <stop busStop="7191688891" duration="15"/>
+        <stop busStop="237962650" duration="15"/>
+        <stop busStop="434507138" duration="15"/>
+    </route>
+    <route id="bus_37Noo_Route" edges="770446896#0 770446896#1 759987750#0 195649386#1 7045675#1 770424007 146254176 814779818">
+        <stop busStop="3299908041" duration="15"/>
+        <stop busStop="3299908040" duration="15"/>
+        <stop busStop="7191688890" duration="15"/>
+        <stop busStop="bs_0" duration="15"/>
+        <stop busStop="3303180666" duration="15"/>
+        <stop busStop="3303180663" duration="15"/>
+    </route>
+    <route id="bus_22Slo_Route" edges="7045925#0 -770426572#0 770426567 770426566#0 7045689 614449799#2.379">
+        <stop busStop="4622218686" duration="15"/>
+        <stop busStop="3011895790" duration="15"/>
+        <stop busStop="11405370176" duration="15"/>
+        <stop busStop="7191688891" duration="15"/>
+    </route>
+    <route id="bus_22Mui_Route" edges="195649386#1 7045675#1 -770426566#0 -770426567 770426572#0 -7045925#2">
+        <stop busStop="7191688890" duration="15"/>
+        <stop busStop="bs_0" duration="15"/>
+        <stop busStop="-4622218685" duration="15"/>
+        <stop busStop="1614149711" duration="15"/>
+    </route>
+    <route id="bus_40Mui_Route" edges="195649386#1 7045675#1 -754704157 -7045691">
+        <stop busStop="7191688890" duration="15"/>
+        <stop busStop="bs_0" duration="15"/>
+        <stop busStop="4621136511" duration="15"/>
+    </route>
+    <route id="bus_40Ams_Route" edges="7045691 754704157 7045689 614449799#2.379">
+        <stop busStop="4621136512" duration="15"/>
+        <stop busStop="11405370176" duration="15"/>
+        <stop busStop="7191688891" duration="15"/>
+    </route>
+    <route id="bus_65KNS_Route" edges="7045925#0 -770426572#0 770426567 770426566#0 -754704157 -7045691">
+        <stop busStop="4622218686" duration="15"/>
+        <stop busStop="3011895790" duration="15"/>
+        <stop busStop="4621136511" duration="15"/>
+    </route>
+    <route id="bus_65Ams_Route" edges="7045691 754704157 -770426566#0 -770426567 770426572#0 -7045925#2">
+        <stop busStop="4621136512" duration="15"/>
+        <stop busStop="-4622218685" duration="15"/>
+        <stop busStop="1614149711" duration="15"/>
+    </route>
+    <flow id="bus_37Ams" type="bus_bus" route="bus_37Ams_Route" line="bus_37Ams" begin="0" end="10800" period="900"/>
+    <flow id="bus_37Noo" type="bus_bus" route="bus_37Noo_Route" line="bus_37Noo" begin="200" end="10800" period="900"/>
+    <flow id="bus_22Slo" type="bus_bus" route="bus_22Slo_Route" line="bus_22Slo" begin="400" end="10800" period="600"/>
+    <flow id="bus_22Mui" type="bus_bus" route="bus_22Mui_Route" line="bus_22Mui" begin="300" end="10800" period="600"/>
+    <flow id="bus_40Mui" type="bus_bus" route="bus_40Mui_Route" line="bus_40Mui" begin="500" end="10800" period="1200"/>
+    <flow id="bus_40Ams" type="bus_bus" route="bus_40Ams_Route" line="bus_40Ams" begin="600" end="10800" period="1200"/>
+    <flow id="bus_65KNS" type="bus_bus" route="bus_65KNS_Route" line="bus_65KNS" begin="100" end="10800" period="900"/>
+    <flow id="bus_65Ams" type="bus_bus" route="bus_65Ams_Route" line="bus_65Ams" begin="300" end="10800" period="900"/>
+</routes>

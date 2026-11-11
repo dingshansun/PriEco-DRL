@@ -13,10 +13,10 @@ eval_runs/
 *.sumocfg
 *.png
 *.pdf
-For_correcting_LTT.txt
-Bus_stop_position.txt
-Edge_length_speed.txt
-In_out_pairs.txt
-Signal_phase.txt
-Sourced_link.txt
-Corridor_edge.txt
+# Included minimal corridor scenario.
+!1_osm.sumocfg
+!1_1_osm.net.xml
+!1_osm.bus.trips.xml
+!1_osm.car.trips.xml
+!1_osm_stops.add.xml
+!osm.view.xml
