@@ -1,0 +1,12 @@
+# Inspected Python 3.10 source-test environment.
+numpy==1.25.2
+pandas==2.3.2
+matplotlib==3.8.0
+torch==2.8.0
+stable-baselines3==2.7.0
+gymnasium==0.29.1
+cloudpickle==2.2.1
+traci==1.18.0
+sumolib==1.18.0
+# Required by the training entry point's TensorBoard logger.
+tensorboard==2.17.1
